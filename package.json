@@ -1,0 +1,30 @@
+{
+  "name": "studentcrud",
+  "version": "1.0.0",
+  "author": "Hrithik Sawant <hrithiksawant80@gmail.com>",
+  "license": "MIT",
+  "description": "Simple CRUD API",
+  "private": true,
+  "scripts": {
+    "start": "nodemon --exec babel-node ./bin/www",
+    "lint": "eslint ./"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/node": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "eslint": "^8.17.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.2",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.16"
+  }
+}
