@@ -1,0 +1,46 @@
+###
+
+# curl -X GET http://localhost:3000/students/
+GET http://localhost:3000/students/
+
+###
+
+# curl -X GET http://localhost:3000/students/1
+GET http://localhost:3000/students/1
+
+###
+
+# curl -H "Content-Type: application/json" -d '{"name":"camimendes","email":"camimendes@gmail.com","age":20,"dob":"2000-10-12","department":"Computer Science"}' -X POST http://localhost:3000/students/
+POST http://localhost:3000/students/
+Content-Type: application/json
+
+{
+  "name": "camimendes",
+  "email": "camimendes@gmail.com",
+  "age": 20,
+  "dob": "2000-10-24",
+  "department": "Computer Science"
+}
+
+###
+
+# curl -H "Content-Type: application/json" -d '{"name":"Hrithik","email":"hrithiksawant80@gmail.com","age":12,"dob":"2001-12-10","department":"IT"}' -X PUT http://localhost:3000/students/1
+PUT http://localhost:3000/students/1
+Content-Type: application/json
+
+{
+  "name": "Hrithik",
+  "email": "hrithiksawant80@gmail.com",
+  "age": 12,
+  "dob": "2001-12-10",
+  "department": "IT"
+}
+
+###
+
+# curl -X DELETE http://localhost:3000/students/1
+DELETE http://localhost:3000/students/1
+
+###
+
+
