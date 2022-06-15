@@ -27,13 +27,8 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  const {
-    name,
-    email,
-    age,
-    dob
-  } = req.body
-  pool.query('INSERT INTO students (name,email,age,dob) VALUES ($1,$2,$3,$4) RETURNING *;', [name, email, age, dob], (err, result) => {
+  const {name, email, age, dob, department} = req.body
+  pool.query('INSERT INTO students (name,email,age,dob,department,created_at,updated_at) VALUES ($1,$2,$3,$4,$5,now(),now()) RETURNING *;', [name, email, age, dob,department], (err, result) => {
     if (err) {
       res.status(500).json(err)
     } else {
@@ -49,7 +44,9 @@ router.put('/:id', (req, res) => {
                        set name = '${student.name}',
                        email = '${student.email}',
                        age = '${student.age}',
-                       dob = '${student.dob}'
+                       dob = '${student.dob}',
+                       department = '${student.department}',
+                       updated_at = now()
                        where id = ${req.params.id} RETURNING *;`
 
   pool.query(updateQuery, (err, result) => {

@@ -6,3 +6,6 @@ INSERT INTO students (id,name,email,age,dob,department,created_at,updated_at) VA
                          (4,'Richard','richard@gmail.com',24,'1998-06-07','Computer Science','now()','now()'),
                          (5,'Erlich Bachman','erlich@gmail.com',25,'1997-08-25','Computer Science','now()','now()');
 
+;
+
+alter sequence students_sequence RESTART with 6;
